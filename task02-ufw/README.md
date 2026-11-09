@@ -14,7 +14,7 @@ A firewall is a security control that sits between a system and the network. It 
 | Item | Detail |
 |---|---|
 | Firewall machine | Ubuntu virtual machine (VirtualBox), IP 192.168.1.103 |
-| Test machine | Windows laptop, IP 192.168.1.104 |
+| Test machine | Windows virtual machine, IP 192.168.1.104 |
 | Test service | Apache2 web server listening on port 80 |
 | Date | 2026-11-09 |
 
@@ -91,7 +91,7 @@ sudo ufw status verbose
 
 ### 5.7 Test that denied traffic is blocked
 
-A machine does not filter traffic it sends to itself, so I tested from a second machine. Apache2 was already listening on port 80 of the Ubuntu machine. From my Windows laptop, I ran this in PowerShell:
+A machine does not filter traffic it sends to itself, so I tested from a second machine. Apache2 was already listening on port 80 of the Ubuntu machine. From my Windows virtual machine, I ran this in PowerShell:
 
 ```powershell
 Test-NetConnection 192.168.1.103 -Port 80
